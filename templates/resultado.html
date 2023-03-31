@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <title>Resultado</title>
-    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
 </head>
 <body>
     <div class="container">
@@ -53,8 +54,13 @@
                 <td>Reintegro :</td>
                 <td>{{ resultado['Reintegro'] }}</td>
               </tr>
+              <tr>
+                <td>Total de sorteos :</td>
+                <td>{{ resultado['Tot_Sorteos'] }}</td>
+              </tr>
             </tbody>
           </table>
+          <img src="static\dist_premios.png" alt="Gráfico de las distribución de los premios">
     </div>
 </body>
 </html>

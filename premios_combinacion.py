@@ -51,7 +51,8 @@ def comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, comp
                    "6" : len(df_premios.query("Aciertos == 6 and Reintegro == 'N'")),
                    "6R" : len(df_premios.query("Aciertos == 6 and Reintegro == 'S'")),
                    "Complementario" : len(df_premios.query("Complementario == 'S'")),
-                   "Reintegro" : len(df_premios.query("Reintegro == 'S'"))}
+                   "Reintegro" : len(df_premios.query("Reintegro == 'S'")),
+                   "Tot_Sorteos" : len(df_resultados)}
 
 
     return dic_aciertos
