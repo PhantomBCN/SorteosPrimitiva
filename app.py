@@ -21,10 +21,11 @@ def procesar():
     num4 = request.form['num4']
     num5 = request.form['num5']
     num6 = request.form['num6']
+    complementario = request.form['complementario']
     reintegro = request.form['reintegro']
     
     dic_resultado={}
-    dic_resultado = premios_combinacion.comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, reintegro)
+    dic_resultado = premios_combinacion.comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, complementario, reintegro)
     
     print(dic_resultado)
 

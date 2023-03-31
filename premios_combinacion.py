@@ -1,6 +1,6 @@
 import pandas as pd
 
-def comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, reintegro):
+def comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, complementario, reintegro):
 
     '''df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header=None,
                  names=['Fecha', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'Complementario', 'Reintegro'],
