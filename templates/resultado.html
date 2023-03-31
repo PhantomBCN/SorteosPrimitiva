@@ -9,10 +9,13 @@
     <div class="container">
         <h1>Resultado</h1>
         <table>
-            <tbody>
+              <tr>
+                <th scope="col">Premio</th>
+                <th scope="col">Veces</th>
+              </tr>
               <tr>
                 <td>0 aciertos :</td>
-                <td>{{ resultado['0'] }}</td>
+                <td>{{resultado['0']}}</td>
               </tr>
               <tr>
                 <td>1 aciertos :</td>
@@ -58,7 +61,6 @@
                 <td>Total de sorteos :</td>
                 <td>{{ resultado['Tot_Sorteos'] }}</td>
               </tr>
-            </tbody>
           </table>
           <img src="static\dist_premios.png" alt="Gráfico de las distribución de los premios">
     </div>
