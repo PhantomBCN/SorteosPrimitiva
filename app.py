@@ -49,15 +49,6 @@ def procesar():
     plt.savefig('static\dist_premios.png')
 
 
-    '''# Datos para el grafico
-    x = ["0", "1", "2", "3", "4", "5", "5C", "6", "6R"]
-    y = [dic_resultado['0'], dic_resultado['1'], dic_resultado['2'], dic_resultado['3'], dic_resultado['4'], dic_resultado['5'], dic_resultado['5C'], dic_resultado['6'], dic_resultado['6R'] ]
-    # Gráfico de barras
-    fig, ax = plt.subplots()
-    ax.bar(x = x, height = y)
-    #plt.show()
-    plt.savefig('static\dist_premios.png')'''
-
     return render_template('resultado.html', resultado=dic_resultado)
 
 if __name__ == '__main__':
