@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado</h1>
+        <table>
+              <tr>
+                <th scope="col">Premio</th>
+                <th scope="col">Veces</th>
+              </tr>
+              <tr>
+                <td>{{ resultado['dic_res']['0'] }}</td>
+                <td>{{ resultado['dic_por']['0'] }}</td>
+              </tr>
+          </table>
+          <img src="static\dist_premios.png" alt="Gráfico de las distribución de los premios">
+    </div>
+</body>
+</html>

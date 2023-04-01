@@ -1,46 +1,53 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	line-height: 1.5;
-	background-color: #f2f2f2;
-	margin: 0;
-	padding: 0;
+	font-family: Arial, Helvetica, sans-serif; /* Define la fuente de texto para todo el documento */
+	font-size: 18px; /* Define el tamaño de fuente para todo el documento */
+	line-height: 1; /* Define el interlineado para todo el documento */
+	background-color: #f2f2f2; /* Establece el color de fondo para todo el documento */
+	margin: 0; /* Establece el margen del documento a 0 */
+	padding: 0; /* Establece el relleno del documento a 0 */
 }
+
 
 .container {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
+	max-width: 800px; /* Establece el ancho máximo del contenedor a 800 píxeles */
+	margin: 0 auto; /* Establece el margen izquierdo y derecho del contenedor en automático, para que se centre horizontalmente */
+	padding: 20px; /* Establece el relleno del contenedor en 20 píxeles */
 }
+
 
 h1 {
-	font-size: 32px;
-	margin-bottom: 20px;
+	font-size: 32px; /* Establece el tamaño de fuente para los encabezados de nivel 1 */
+	margin-bottom: 20px; /* Establece el margen inferior de los encabezados de nivel 1 a 20 píxeles */
 }
+
 
 p {
-	font-size: 24px;
-	margin-bottom: 40px;
+	font-size: 24px; /* Establece el tamaño de fuente para los párrafos */
+	margin-bottom: 40px; /* Establece el margen inferior de los párrafos a 40 píxeles */
 }
+
 
 table {
-	border-collapse: collapse;
-	margin-top: 30px;
-	width: 100%;
+	border-collapse: collapse; /* Establece la propiedad border-collapse para la tabla, lo que fusiona las líneas de borde adyacentes */
+	margin-top: 30px; /* Establece el margen superior de la tabla a 30 píxeles */
+	width: 50%; /* Establece el ancho de la tabla al 100% del contenedor padre */
 }
+
 
 th, td {
-	padding: 12px;
-	text-align: left;
-	border-bottom: 1px solid #ddd;
+	padding: 12px; /* Establece el relleno para las celdas de encabezado y datos en 12 píxeles */
+	text-align: left; /* Establece la alineación del texto a la izquierda para las celdas de encabezado y datos */
+	border-bottom: 1px solid #ddd; /* Establece una línea de borde inferior de 1 píxel sólida con un color gris claro para las celdas de encabezado y datos */
 }
+
 
 th {
-	background-color: #4CAF50;
-	color: white;
+	background-color: #4CAF50; /* Establece el color de fondo de las celdas de encabezado a un tono verde oscuro */
+	color: white; /* Establece el color del texto de las celdas de encabezado a blanco */
 }
 
-td:nth-child(even) {
-	text-align: right;
-	font-weight: bold;
+
+td:nth-child(2), td:nth-child(3){
+	text-align: right; /* Establece la alineación del texto a la derecha para las celdas 2 y 3 de cada fila de la tabla */
+	font-weight: bold; /* Establece el grosor de la fuente en negrita para las celdas 2 y 3 de cada fila de la tabla */
 }

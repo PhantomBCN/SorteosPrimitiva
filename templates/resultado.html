@@ -12,54 +12,76 @@
               <tr>
                 <th scope="col">Premio</th>
                 <th scope="col">Veces</th>
+                <th scope="col">%</th>
               </tr>
               <tr>
                 <td>0 aciertos :</td>
-                <td>{{resultado['0']}}</td>
+                <td>{{ resultado['dic_res']['0'] }}</td>
+                <td>{{ resultado['dic_por']['0'] }}</td>
               </tr>
               <tr>
                 <td>1 aciertos :</td>
-                <td>{{ resultado['1'] }}</td>
+                <td>{{ resultado['dic_res']['1'] }}</td>
+                <td>{{ resultado['dic_por']['1'] }}</td>
               </tr>
               <tr>
                 <td>2 aciertos :</td>
-                <td>{{ resultado['2'] }}</td>
+                <td>{{ resultado['dic_res']['2'] }}</td>
+                <td>{{ resultado['dic_por']['2'] }}</td>
               </tr>
               <tr>
                 <td>3 aciertos :</td>
-                <td>{{ resultado['3'] }}</td>
+                <td>{{ resultado['dic_res']['3'] }}</td>
+                <td>{{ resultado['dic_por']['3'] }}</td>
+
               </tr>
               <tr>
                 <td>4 aciertos :</td>
-                <td>{{ resultado['4'] }}</td>
+                <td>{{ resultado['dic_res']['4'] }}</td>
+                <td>{{ resultado['dic_por']['4'] }}</td>
+
               </tr>
               <tr>
                 <td>5 aciertos :</td>
-                <td>{{ resultado['5'] }}</td>
+                <td>{{ resultado['dic_res']['5'] }}</td>
+                <td>{{ resultado['dic_por']['5'] }}</td>
+
               </tr>            
               <tr>
                 <td>5 (aciertos + C):</td>
-                <td>{{ resultado['5C'] }}</td>
+                <td>{{ resultado['dic_res']['5C'] }}</td>
+                <td>{{ resultado['dic_por']['5C'] }}</td>
+
               </tr>
               <tr>
                 <td>6 aciertos :</td>
-                <td>{{ resultado['6'] }}</td>
+                <td>{{ resultado['dic_res']['6'] }}</td>
+                <td>{{ resultado['dic_por']['6'] }}</td>
+
               </tr>
               <tr>
                 <td>Especial (6 aciertos + R) :</td>
-                <td>{{ resultado['6R'] }}</td>
+                <td>{{ resultado['dic_res']['6R'] }}</td>
+                <td>{{ resultado['dic_por']['6R'] }}</td>
+
               </tr>
               <tr>
                 <td>Complementario :</td>
-                <td>{{ resultado['Complementario'] }}</td>
+                <td>{{ resultado['dic_res']['Complementario'] }}</td>
+                <td>{{ resultado['dic_por']['Complementario'] }}</td>
+
               </tr>
               <tr>
                 <td>Reintegro :</td>
-                <td>{{ resultado['Reintegro'] }}</td>
+                <td>{{ resultado['dic_res']['Reintegro'] }}</td>
+                <td>{{ resultado['dic_por']['Reintegro'] }}</td>
+
               </tr>
               <tr>
                 <td>Total de sorteos :</td>
-                <td>{{ resultado['Tot_Sorteos'] }}</td>
+                <td>{{ resultado['dic_res']['Tot_Sorteos'] }}</td>
+                <td>{{ resultado['dic_por']['Tot_SOrteos'] }}</td>
+
               </tr>
           </table>
           <img src="static\dist_premios.png" alt="Gráfico de las distribución de los premios">

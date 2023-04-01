@@ -26,8 +26,27 @@ def procesar():
     reintegro = request.form['reintegro']
     
     dic_resultado={}
+    dic_porcent = {}
+    dic_parametros = {}
+
     dic_resultado = premios_combinacion.comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, complementario, reintegro)
+    dic_porcent = {'0': str(round((100*dic_resultado['0'])/dic_resultado['Tot_Sorteos'],2))+"%", 
+                   '1': str(round((100*dic_resultado['1'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '2': str(round((100*dic_resultado['2'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '3': str(round((100*dic_resultado['3'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '4': str(round((100*dic_resultado['4'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '5': str(round((100*dic_resultado['5'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '5C': str(round((100*dic_resultado['5C'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '6': str(round((100*dic_resultado['6'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   '6R': str(round((100*dic_resultado['6R'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   'Complementario': str(round((100*dic_resultado['Complementario'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   'Reintegro': str(round((100*dic_resultado['Reintegro'])/dic_resultado['Tot_Sorteos'],2))+"%",
+                   'Tot_Sorteos': str(round((100*dic_resultado['Tot_Sorteos'])/dic_resultado['Tot_Sorteos'],2))+"%",}
     
+    dic_parametros = {'dic_res' : dic_resultado, 'dic_por': dic_porcent}
+
+
+
     print(dic_resultado)
 
 
@@ -48,8 +67,7 @@ def procesar():
     # Mostrar el gráfico
     plt.savefig('static\dist_premios.png')
 
-
-    return render_template('resultado.html', resultado=dic_resultado)
+    return render_template('resultado.html', resultado=dic_parametros)
 
 if __name__ == '__main__':
     app.run(debug=True)
