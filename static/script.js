@@ -2,7 +2,7 @@
 function generarNumerosAleatorios() {
     let numeros = [];
     while (numeros.length < 6) {
-      let numero = Math.floor(Math.random() * 49) + 1;
+      let numero = Math.floor(Math.random() * 49) + 1; // Sensitive
       if (numeros.indexOf(numero) === -1) {
         numeros.push(numero);
       }
