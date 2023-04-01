@@ -3,11 +3,9 @@ import matplotlib.pyplot as plt
 from flask import Flask, render_template, request
 import premios_combinacion
 
-
 df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header=None,
                 names=['Fecha', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'Complementario', 'Reintegro','Tot_Sorteos'],
                 dtype=str, parse_dates=['Fecha'], dayfirst=True)
-
 
 app = Flask(__name__) # Sensitive: CSRFProtect is missing
 
@@ -46,10 +44,7 @@ def procesar():
     
     dic_parametros = {'dic_res' : dic_resultado, 'dic_por': dic_porcent}
 
-
-
     print(dic_resultado)
-
 
     # Datos para el grafico
     x = ["0", "1", "2", "3", "4", "5", "5C", "6", "6R"]
