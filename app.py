@@ -11,8 +11,6 @@ df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header
 
 app = Flask(__name__) # Sensitive: CSRFProtect is missing
 
-#app.config['WTF_CSRF_ENABLED'] = False # Sensitive
-
 @app.route('/')
 def formulario():
     return render_template('formulario.html')
