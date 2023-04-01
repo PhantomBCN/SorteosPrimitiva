@@ -19,7 +19,17 @@ def comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, comp
         comp = row[['Complementario']].tolist()
         reint= row[['Reintegro']].tolist()
         
-        if str(num1).zfill(2) in valores:
+        numeros = [num1, num2, num3, num4, num5, num6]
+        aciertos = sum([str(num).zfill(2) in valores for num in numeros])
+
+        if str(complementario).zfill(2) in comp:
+            v_comp = "S"
+
+        if str(reintegro) in reint:
+            v_reint = "S"
+
+
+        '''if str(num1).zfill(2) in valores:
             aciertos+=1
         if str(num2).zfill(2) in valores:
             aciertos+=1
@@ -34,7 +44,8 @@ def comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, comp
         if str(complementario).zfill(2) in comp:
             v_comp = "S"
         if str(reintegro) in reint:
-            v_reint = "S"
+            v_reint = "S"'''
+            
         df_premios.loc[len(df_premios)] = [row['Fecha'], aciertos, v_comp, v_reint]
 
         aciertos=0
