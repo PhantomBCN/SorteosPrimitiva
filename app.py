@@ -10,7 +10,7 @@ df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header
 
 
 app = Flask(__name__)
-app.config['WTF_CSRF_ENABLED'] = False
+app.config['WTF_CSRF_ENABLED'] = False # Sensitive
 
 @app.route('/')
 def formulario():
