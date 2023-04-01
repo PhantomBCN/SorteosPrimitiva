@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+	<title>Formulario de ejemplo</title>
+	<link rel="stylesheet" href=""{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Ingrese 6 números entre 1 y 49:</h1>
+	<form method="POST" action="/procesar">
+		<label for="num1">Número 1:</label>
+		<input type="number" name="num1" min="1" max="49" required title="Intoruzca el numero de la combinacion" placeholder="##"><br>
+		<label for="num2">Número 2:</label>
+		<input type="number" name="num2" min="1" max="49" required title="Intoruzca el numero de la combinacion" placeholder="##"><br>
+		<label for="num3">Número 3:</label>
+		<input type="number" name="num3" min="1" max="49" required title="Intoruzca el numero de la combinacion" placeholder="##"><br>
+		<label for="num4">Número 4:</label>
+		<input type="number" name="num4" min="1" max="49" required title="Intoruzca el numero de la combinacion" placeholder="##"><br>
+		<label for="num5">Número 5:</label>
+		<input type="number" name="num5" min="1" max="49" required title="Intoruzca el numero de la combinacion" placeholder="##"><br>
+		<label for="num6">Número 6:</label>
+		<input type="number" name="num6" min="1" max="49" required title="Intoruzca el numero de la combinacion" placeholder="##"><br>
+		<label for="complementario">Complementario:</label>
+		<input type="number" name="complementario" min="1" max="49" required title="Intoruzca el numero complementario" placeholder="##"><br>
+		<label for="reintegro">Reintegro:</label>
+		<input type="number" name="reintegro" min="0" max="9" required title="Intoruzca el numero del reintegro" placeholder="#"><br>
+		<input type="submit" value="Enviar">
+		<button type="button" onclick="generarNumerosAleatorios()">Generar números aleatorios</button>
+	</form>
+	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
