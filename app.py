@@ -8,7 +8,9 @@ df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header
                 names=['Fecha', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'Complementario', 'Reintegro','Tot_Sorteos'],
                 dtype=str, parse_dates=['Fecha'], dayfirst=True)
 
+
 app = Flask(__name__)
+app.config['WTF_CSRF_ENABLED'] = False
 
 @app.route('/')
 def formulario():
