@@ -85,6 +85,12 @@ th {
 	color: white; /* Establece el color del texto de las celdas de encabezado a blanco */
 }
 
+td:nth-child(1){
+	text-align: left; /* Establece la alineación del texto a la derecha para las celdas 2 y 3 de cada fila de la tabla */
+  background-color: black;
+  color: white;
+	font-weight: bold; /* Establece el grosor de la fuente en negrita para las celdas 2 y 3 de cada fila de la tabla */
+}
 
 td:nth-child(2), td:nth-child(3){
 	text-align: right; /* Establece la alineación del texto a la derecha para las celdas 2 y 3 de cada fila de la tabla */
