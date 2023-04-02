@@ -13,5 +13,5 @@ RUN pip install -r requirements.txt
 # Exponemos el puerto en el que se ejecuta la aplicación
 EXPOSE 8080
 
-# Comando para ejecutar la aplicación
-CMD ["python", "app.py"]
+# Define the entry point for the container
+CMD ["flask", "run", "--host=0.0.0.0"]
