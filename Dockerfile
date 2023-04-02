@@ -1,14 +1,17 @@
-# Use the official Python image as the base image
-FROM python:3.8
+# Seleccionamos la imagen base de Python 3
+FROM python:3
 
-# Set the working directory in the container
+# Establecemos el directorio de trabajo de la aplicación en el contenedor
 WORKDIR /app
 
-# Copy the application files into the working directory
+# Copiamos los archivos de la aplicación a la imagen
 COPY . /app
 
-# Install the application dependencies
+# Instalamos las dependencias de la aplicación
 RUN pip install -r requirements.txt
 
-# Define the entry point for the container
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Exponemos el puerto en el que se ejecuta la aplicación
+EXPOSE 8080
+
+# Comando para ejecutar la aplicación
+CMD ["python", "app.py"]
