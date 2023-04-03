@@ -66,4 +66,4 @@ def procesar():
     return render_template('resultado.html', resultado=dic_parametros)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5002)
