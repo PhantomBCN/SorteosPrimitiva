@@ -5,7 +5,7 @@ import premios_combinacion
 import datetime
 
 
-df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header=None,
+df_resultados = pd.read_csv('static/SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header=None,
                 names=['Fecha', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'Complementario', 'Reintegro','Tot_Sorteos'],
                 dtype=str, parse_dates=['Fecha'], dayfirst=True)
 
