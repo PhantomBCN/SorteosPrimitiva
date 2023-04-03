@@ -2,10 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from flask import Flask, render_template, request
 import premios_combinacion
+import datetime
+
 
 df_resultados = pd.read_csv('SorteosPrimitiva_SinJOKER_CSV.csv', sep=';', header=None,
                 names=['Fecha', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'Complementario', 'Reintegro','Tot_Sorteos'],
                 dtype=str, parse_dates=['Fecha'], dayfirst=True)
+
+df_resultados = df_resultados.sort_values('Fecha')
+
 
 app = Flask(__name__) # Sensitive: CSRFProtect is missing
 
@@ -23,12 +28,23 @@ def procesar():
     num6 = request.form['num6']
     complementario = request.form['complementario']
     reintegro = request.form['reintegro']
-    
+    fecha_ini = request.form['fecha_ini']
+    fecha_fin = request.form['fecha_fin']
+
+    if fecha_ini == "":
+        fecha_ini= '1985-10-17'
+    if fecha_fin == "":
+        fecha_fin = datetime.date.today()
+
+    print(fecha_ini)
+    print(fecha_fin)
+
+
     dic_resultado={}
     dic_porcent = {}
     dic_parametros = {}
 
-    dic_resultado = premios_combinacion.comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, complementario, reintegro)
+    dic_resultado = premios_combinacion.comprobar_resultados(df_resultados, num1, num2, num3, num4, num5, num6, complementario, reintegro, fecha_ini, fecha_fin)
     dic_porcent = {'0': str(round((100*dic_resultado['0'])/dic_resultado['Tot_Sorteos'],2))+"%", 
                    '1': str(round((100*dic_resultado['1'])/dic_resultado['Tot_Sorteos'],2))+"%",
                    '2': str(round((100*dic_resultado['2'])/dic_resultado['Tot_Sorteos'],2))+"%",
